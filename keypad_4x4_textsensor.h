@@ -25,7 +25,7 @@ class KeypadSensor : public Component, public TextSensor {
     }
     void loop() override {
     // This will be called by App.loop()
-        char key[] = { keypad.getKey() };
+        char key[] = { myKeypad.getKey() };
         if (strlen(key) != 0){
 		        publish_state(key);
         }
